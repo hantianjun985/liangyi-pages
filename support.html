@@ -1,3 +1,119 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>修为专注 · 支持 / Support</title><style>body{max-width:720px;margin:0 auto;padding:28px 22px;font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;color:#29453b;background:#f8f7f1}h1,h2{font-weight:500}section{margin:32px 0}a{color:#1d7661}</style></head><body><h1>修为专注 · 支持</h1><p>修为专注是一款离线专注计时 App。以下问题可以直接在设备上处理。</p><section><h2>如何备份数据？</h2><p>打开 App 左上角菜单，进入“设置与数据”→“备份与数据”，选择导出。导出的 JSON 文件由你自行保存；换设备后可使用“合并导入”。卸载前请先备份。</p></section><section><h2>为什么没有提醒或声音？</h2><p>结束提醒需要系统通知权限。白噪音和自然声需要在专注时选择并调高音量；暂停计时时声音也会暂停。请同时检查设备静音模式及系统音量。</p></section><section><h2>如何联系开发者？</h2><p id="support-contact"><a href="mailto:williamhan1214@qq.com">williamhan1214@qq.com</a></p></section><section lang="en"><h1>Xiuwei Focus · Support</h1><p>For local backup, open Settings &amp; Data, then export your JSON backup. Import it on your new device before deleting the old app. Notifications require permission. Ambient audio plays during an active focus session. Contact <a href="mailto:williamhan1214@qq.com">williamhan1214@qq.com</a> for support.</p></section><p><a href="privacy.html">隐私政策 / Privacy Policy</a></p></body></html>
-
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="修为专注使用帮助：本机备份、合并导入、数据恢复、声音与提醒。">
+  <title>修为专注 · 支持 / Support</title>
+  <style>
+    :root { color-scheme: light dark; --paper: #f8f7f1; --ink: #243d34; --muted: #53675b; --link: #145b46; --line: #cbd7cb; }
+    * { box-sizing: border-box; }
+    html { background: var(--paper); }
+    body { max-width: 48rem; margin: 0 auto; padding: 28px clamp(18px, 5vw, 32px) 40px; color: var(--ink); font: 1rem/1.75 -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; overflow-wrap: anywhere; }
+    h1, h2, h3 { line-height: 1.4; font-weight: 600; }
+    h1 { margin: 0.25rem 0 0.75rem; font-size: clamp(1.8rem, 6vw, 2.4rem); }
+    h2 { margin: 0 0 1rem; font-size: 1.4rem; }
+    h3 { margin: 0 0 0.75rem; font-size: 1.1rem; }
+    p { margin: 0.5rem 0 1rem; }
+    a { display: inline-block; max-width: 100%; min-height: 44px; padding: 8px 0; color: var(--link); text-underline-offset: 0.2em; }
+    a:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 3px; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 12px; margin-top: 1rem; }
+    nav a { padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; }
+    main > section { margin-top: 2.5rem; scroll-margin-top: 1rem; }
+    article { padding: 1.25rem 0 0.5rem; border-top: 1px solid var(--line); }
+    .intro, footer { color: var(--muted); }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+    .skip-link { position: absolute; top: 8px; left: 8px; z-index: 1; max-width: calc(100% - 16px); padding: 8px 12px; background: var(--paper); transform: translateY(-160%); }
+    .skip-link:focus { transform: translateY(0); }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #16251f; --ink: #edf1e7; --muted: #b9c8bc; --link: #b4e2c7; --line: #526b5b; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">跳至正文 / Skip to content</a>
+  <header>
+    <h1>修为专注 · 支持</h1>
+    <p class="intro">一款离线专注计时 App。这里说明当前原生 App 的备份、恢复与计时操作。</p>
+    <nav aria-label="语言与相关页面 / Language and related pages">
+      <a href="#zh" lang="zh-CN">中文</a>
+      <a href="#en" lang="en">English</a>
+      <a href="privacy.html">隐私政策 / Privacy Policy</a>
+    </nav>
+  </header>
+  <main id="content" tabindex="-1">
+    <section id="zh" lang="zh-CN" aria-labelledby="zh-title">
+      <h2 id="zh-title">常见问题</h2>
+      <article>
+        <h3>如何生成并保存备份？</h3>
+        <p>打开“设置与数据”（或页面上的设置按钮）→“备份与数据”，先点“导出当前记录”。成功后再点“分享已生成的备份”，选择文件保存位置。请确认 JSON 文件已保存，再卸载或更换设备。</p>
+        <p>页面会显示备份生成时间。数据发生变化后，须重新导出才能分享最新备份；导出失败不会覆盖之前生成的文件。导出和导入的单份文件上限均为 20 MB（20,000,000 字节）。</p>
+      </article>
+      <article>
+        <h3>合并导入会覆盖本机内容吗？</h3>
+        <p>“合并导入”会加入新的功课和记录，保留当前计时与设置。与本机条目 ID 相同时，保留本机内容。单份备份内部完全相同的同 ID 条目会去重；同 ID 内容不同则整份拒绝，现有记录不变。备份与当前计时冲突时，也会取消合并并保留当前计时。</p>
+        <p>不同设备及浏览器预览之间不会自动同步。请自行保存与来源端兼容的备份；不要将导入理解为云同步。</p>
+      </article>
+      <article>
+        <h3>出现“原数据已保护”怎么办？</h3>
+        <p>在设置中的“数据恢复”里，若已列出“原始文件”，展开后对每份需要保留的副本点“导出原始文件”。普通备份只包含当前可见记录，故障原件需要另外导出。有原件但当前无功课、记录或会话时，普通导出会暂停，防止空白文件误作完整备份；请先导出原件，有新功课、记录或当前会话时可另导出当前数据。设备内已保护的恢复原件不会随“清除本机数据”删除，之后仍可逐份导出。原件保留未修复内容，供检查与恢复使用，不代表已经恢复成功或可以直接导入。</p>
+        <p>若原数据尚未安全读取，普通导出、导入与清除会暂停。请按提示检查文件访问和设备存储空间，再重启 App 重试；此时不要把空白列表当作原记录，也不要先清除或卸载。</p>
+      </article>
+      <article>
+        <h3>为什么没有提醒或声音？</h3>
+        <p>倒计时结束提醒需要系统通知权限，可在系统设置中开启；拒绝权限不影响计时。心流需要手动结束，没有到期提醒。</p>
+        <p>请在“声音”中选择环境声，并检查 App 音量和设备输出音量。手动暂停计时也会暂停声音。电话等系统中断或耳机断开可能暂停声音，计时仍会继续；中断结束后，可在声音页通过“恢复声音”入口恢复，不必重新开始计时。</p>
+      </article>
+      <article>
+        <h3>清除或删除 App 后可以恢复吗？</h3>
+        <p>“清除本机数据”只重置当前功课、修行记录、进度与设置，确认后无法撤销；设备内已保护的恢复原件会保留，仍可到“数据恢复”逐份导出。</p>
+        <p>如需移除 App 私有数据，请先保存需要的文件，再在系统中选择“删除 App”并删除其数据。iOS“卸载 App”（Offload）可能保留文稿与数据。App 不会自动删除你已另存或分享到外部的备份与原件，请在对应位置自行管理。</p>
+      </article>
+      <article>
+        <h3>如何联系开发者？</h3>
+        <p>请说明设备、系统版本和操作步骤，避免发送含私人心得的完整备份。</p>
+        <p id="support-contact"><a href="mailto:williamhan1214@qq.com">williamhan1214@qq.com</a></p>
+      </article>
+    </section>
+    <section id="en" lang="en" aria-labelledby="en-title">
+      <h2 id="en-title">Xiuwei Focus · Support</h2>
+      <p class="intro">An offline focus timer. This guide describes backup, recovery and timer controls in the current native app.</p>
+      <article>
+        <h3>How do I create and save a backup?</h3>
+        <p>Open Settings &amp; Data (or the page’s settings button) → Backup &amp; Data. Choose Export Current Records first. After it succeeds, choose Share Generated Backup and select a destination. Confirm that the JSON file is saved before uninstalling or changing devices.</p>
+        <p>The app shows when the backup was generated. After data changes, export again to share an up-to-date backup. A failed export preserves the previously generated file. The limit for each exported or imported file is 20 MB (20,000,000 bytes).</p>
+      </article>
+      <article>
+        <h3>Does merging a backup overwrite local data?</h3>
+        <p>Merge Import adds new tasks and records while preserving the current timer and settings. When an entry has the same ID as a local entry, the local content is kept. Within one backup, identical entries with the same ID are deduplicated. If entries with the same ID differ, the entire backup is rejected and existing records remain unchanged. A backup that conflicts with the current timer is also not merged; the current timer is preserved.</p>
+        <p>Devices and the browser preview do not sync automatically. Keep backups compatible with their source app; importing is not cloud sync.</p>
+      </article>
+      <article>
+        <h3>What does “Original Data Protected” mean?</h3>
+        <p>If Original Files are listed under Data Recovery in settings, expand the list and use Export Original File for each copy you need to keep. An ordinary backup contains only the currently visible records; damaged originals must be exported separately. With originals but no current tasks, records or session, ordinary export is blocked to avoid a misleading empty backup. Export originals first; current data can be exported once tasks, records or a session exist. Clear Local Data does not delete protected recovery originals on the device; you can still export them individually afterward. These originals retain unrepaired content for inspection and recovery. Their presence does not mean recovery has succeeded or that they can be imported directly.</p>
+        <p>If the original data has not been read safely, ordinary export, import and clearing are paused. Follow the message to check file access and device storage, then restart the app and retry. Do not treat an empty list as your original records, or clear or uninstall the app first.</p>
+      </article>
+      <article>
+        <h3>Why are reminders or sound missing?</h3>
+        <p>Countdown completion reminders require system notification permission, which you can enable in system settings. Declining permission does not affect the timer. Flow sessions must be ended manually and have no expiry reminder.</p>
+        <p>Select an ambient sound in Sound and check both the app volume and device output volume. Pausing the timer also pauses sound. System interruptions, such as calls or disconnected headphones, may pause sound while the timer continues. After the interruption ends, use Resume Sound on the sound page; there is no need to restart the timer.</p>
+      </article>
+      <article>
+        <h3>Can I recover data after clearing or deleting the app?</h3>
+        <p>Clear Local Data resets only the current tasks, session records, progress and settings. Once confirmed, this reset cannot be undone. Protected recovery originals on the device are retained and can still be exported individually from Data Recovery.</p>
+        <p>To remove the app’s private data, first save any files you need, then use Delete App and delete its data in system settings. iOS Offload App may retain documents and data. The app does not automatically delete backups or originals you saved or shared elsewhere; manage those files at their destinations.</p>
+      </article>
+      <article>
+        <h3>How can I contact the developer?</h3>
+        <p>Describe your device, system version and the steps you took. Avoid sending a full backup containing private reflections.</p>
+        <p><a href="mailto:williamhan1214@qq.com">williamhan1214@qq.com</a></p>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <a href="privacy.html">隐私政策 / Privacy Policy</a>
+  </footer>
+</body>
+</html>
 
